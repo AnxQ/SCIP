@@ -1,0 +1,17 @@
+<component name="libraryTable">
+  <library name="Materialize" type="javaScript">
+    <properties>
+      <sourceFilesUrls>
+        <item url="file://$PROJECT_DIR$/static/js/materialize.js" />
+      </sourceFilesUrls>
+    </properties>
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/static/js/materialize.js" />
+      <root url="file://$PROJECT_DIR$/static/js/materialize.min.js" />
+    </CLASSES>
+    <DOCUMENTATION>
+      <root url="https://materializecss.com" />
+    </DOCUMENTATION>
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,289 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"
+          media="screen,projection"/>
+    <link rel="shortcut icon" href="favicon.ico">
+
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script type="text/javascript" src="js/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="js/messages_zh.min.js"></script>
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta charset="utf-8">
+    <title>注册</title>
+</head>
+
+<body class="homepage">
+<!-- Header -->
+<header>
+    <nav>
+        <div class="nav-wrapper grey darken-3">
+            <a href="#" class="brand-logo"><img src="images/LOGO.png" height="40" width="140" style="margin: 12px"></a>
+            <a href="#" class="brand-logo center">苏创知识产权管理系统</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="#"><i class="material-icons left">search</i>快速相应</a></li>
+                <li><a href="#"><i class="material-icons left">attach_money</i>降低成本</a></li>
+                <li><a href="#"><i class="material-icons left">settings</i>一站式服务</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+<!--背景-->
+<div id="background" style="position:absolute;z-index:-1;width:100%;height:100%;top:0;left:0;">
+    <img src="images/background.jpg" width="100%" height="100%"/>
+</div>
+<!--页面-->
+<div class="container" style="width: 90%;">
+    <br>
+    <div class="card-panel white z-depth-3">
+        <div class="container login" style="width: 95%;">
+                <div class="row">
+                    <div class="col l6">
+                        <form id="signinForm">
+                            <blockquote>
+                                欢迎注册
+                            </blockquote>
+                            <!--<div class="photo"></div>-->
+                            <div class="row">
+                                <div class="input-field col s6">
+                                    <i class="material-icons prefix">account_circle</i>
+                                    <input id="last_name" type="text" class="validate">
+                                    <label for="last_name">姓名</label>
+                                </div>
+                                <div class="input-field col s6">
+                                    <select>
+                                        <option value="" disabled selected>下拉选择...</option>
+                                        <option value="1">企业</option>
+                                        <option value="2">学校</option>
+                                        <option value="3">科研院所</option>
+                                        <option value="4">其它</option>
+                                    </select>
+                                    <label>所属单位</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s4">
+                                    <i class="material-icons prefix">location_on</i>
+                                    <select>
+                                        <option value="" disabled selected>请选择...</option>
+                                        <option value="1">北京</option>
+                                        <option value="2">上海</option>
+                                        <option value="3">江苏</option>
+                                    </select>
+                                    <label>省/直辖市</label>
+                                </div>
+                                <div class="input-field col s4">
+                                    <select>
+                                        <option value="" disabled selected>请选择...</option>
+                                    </select>
+                                    <label>市/县/乡</label>
+                                </div>
+                                <div class="input-field col s4">
+                                    <select>
+                                        <option value="" disabled selected>请选择...</option>
+                                    </select>
+                                    <label>区</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s5">
+                                    <i class="material-icons prefix">phone</i>
+                                    <input id="icon_telephone" type="tel" class="validate">
+                                    <label for="icon_telephone">手机号</label>
+                                </div>
+                                <div class="input-field col s4">
+                                    <i class="material-icons prefix">code</i>
+                                    <input id="val_code" type="tel" class="validate">
+                                    <label for="val_code">验证码</label>
+                                </div>
+                                <div class="col s3">
+                                    <a class="btn waves-effect blue" style="margin-top: 20px">获得验证码</a>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s6">
+                                    <i class="material-icons prefix">lock</i>
+                                    <input id="password" type="password" class="validate">
+                                    <label for="password">密码 (6～16位字母数字)</label>
+                                </div>
+                                <div class="input-field col s6">
+                                    <input id="confirm_password" type="password" class="validate">
+                                    <label for="confirm_password">确认密码</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <label>
+                                    <input type="checkbox" />
+                                    <span>我已阅读并同意 <a href="#">许可协议</a> 中的内容</span>
+                                </label>
+                                <button class="btn waves-effect blue right orange" style="width: 200px">注册</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col l5 push-l1">
+                        <blockquote>
+
+                            <p>注册提示：</p><font color="gray">
+                            <p>
+                                一、遵守中华人民共和国法律法令和其他相关法规，不可发布破坏宪法和法律、法规的信息。
+                            </p>
+                            <p>二、遵守公安部关于《计算机信息网络国际联网安全保护管理办法》的规定，自觉维护计算机信息网络的安全。</p>
+                            <p>三、不得在网上宣扬封建迷信、淫秽、色情、暴力、赌博等不正当行为。</p>
+                            <p>四、企业或个人发布的信息要真实有效、准确完整，并不得有引人误解或者虚假的陈述。</p>
+                            <p>五、申请人必须填写详细、真实信息，如企业 / 单位名称、简介、地址、电话等。因信息填写不真实、不完整或填写错误的本网站不予以发表。</p>
+                        </font>
+                        </blockquote>
+                    </div>
+                </div>
+
+            </div>
+    </div>
+</div>
+</body>
+<style>
+    html, body {
+        overflow: hidden;
+        overflow-y: auto;
+    }
+
+    .login .photo {
+        position: relative;
+        width: 100px;
+        height: 100px;
+        margin: auto;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        border-radius: 50%;
+        background: rgb(223, 223, 223);
+        border: 13px solid rgb(223, 223, 223);
+        overflow: hidden !important;
+        transform: rotate(-1deg);
+    }
+
+    .login .photo:before {
+        position: absolute;
+        content: '';
+        width: 35px;
+        height: 35px;
+        top: 0px;
+        right: 20px;
+        border-radius: 50%;
+        background: #aaa;
+        border: 2px solid #fff;
+        transform: scale(0);
+        transition: 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+        -webkit-animation: user-head 0.5s 0s forwards;
+        -moz-animation: user-head 0.5s 0s forwards;
+        animation: user-head 0.5s 0s forwards;
+    }
+
+    .login .photo:after {
+        position: absolute;
+        content: '';
+        width: 140px;
+        height: 220px;
+        top: 38px;
+        right: -32px;
+        border-radius: 50%;
+        background: #aaa;
+        border: 2px solid #fff;
+        transform: translateY(36px);
+        transition: 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+        -webkit-animation: user-body 0.5s 0.3s forwards;
+        -moz-animation: user-body 0.5s 0.3s forwards;
+        animation: user-body 0.5s 0.3s forwards;
+    }
+
+    @-webkit-keyframes user-head {
+        100% {
+            -webkit-transform: scale(1);
+            transform: scale(1);
+            -moz-transform: scale(1);
+        }
+    }
+
+    @-moz-keyframes user-head {
+        100% {
+            -webkit-transform: scale(1);
+            transform: scale(1);
+            -moz-transform: scale(1);
+        }
+    }
+
+    @keyframes user-head {
+        100% {
+            -webkit-transform: scale(1);
+            transform: scale(1);
+            -moz-transform: scale(1);
+        }
+    }
+
+    @-webkit-keyframes user-body {
+        100% {
+            -webkit-transform: translateY(2px);
+            transform: translateY(2px);
+            -moz-transform: translateY(2px);
+        }
+    }
+
+    @-moz-keyframes user-body {
+        100% {
+            -webkit-transform: translateY(2px);
+            transform: translateY(2px);
+            -moz-transform: translateY(2px);
+        }
+    }
+
+    @keyframes user-body {
+        100% {
+            -webkit-transform: translateY(2px);
+            transform: translateY(2px);
+            -moz-transform: translateY(2px);
+        }
+    }
+
+    .card-panel {
+
+        min-width: 380px;
+        min-height: 570px;
+
+    }
+
+    .row:after {
+        display: none;
+    }
+
+    [type="checkbox"]:checked + label:before {
+        border-bottom: 2px solid #f98000;
+        border-right: 2px solid #f98000;
+    }
+</style>
+<script type="text/javascript">
+  $(document).ready(function () {
+    $('select').formSelect();
+
+  });
+
+  function change() {
+    var val = document.getElementById("permission").value;
+    if (val === "学生") {
+      document.getElementsByTagName("label")[1].innerHTML = "学号";
+    }
+    else if (val === "老师") {
+      document.getElementsByTagName("label")[1].innerHTML = "工号";
+    }
+    else {
+      document.getElementsByTagName("label")[1].innerHTML = "帐号";
+    }
+  }
+
+  document.getElementById('permission').setAttribute("onchange", "change()");
+</script>
+</html>
