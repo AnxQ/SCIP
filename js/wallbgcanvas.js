@@ -1,3 +1,4 @@
+
 var SEPARATION = 100, AMOUNTX = 50, AMOUNTY = 50;
 
 var container;
@@ -15,9 +16,7 @@ animate();
 
 function init() {
 
-    container = document.createElement( 'div' );
-    container.id = 'wall-bg';
-    document.body.appendChild( container );
+    container = document.getElementById( 'wall-bg' );
     overlay = document.createElement( 'span' );
     container.appendChild( overlay );
 
@@ -30,7 +29,7 @@ function init() {
 
     var PI2 = Math.PI * 2;
     var material = new THREE.ParticleCanvasMaterial( {
-        color: '#e6eaea',
+        color: '#b6deff',
         program: function ( context ) {
 
             context.beginPath();
