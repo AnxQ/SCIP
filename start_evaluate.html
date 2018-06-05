@@ -104,24 +104,87 @@
 </header>
 <main>
     <div class="container">
-        <br>
         <div class="row">
-            <div class="col s12 m10 offset-m1 xl10 offset-xl1">
-                <a href="#!" class="breadcrumb"><i class="material-icons">library_books</i>实例选择</a>
-                <a href="#!" class="breadcrumb"><i class="material-icons">fingerprint</i>身份校验</a>
-                <a href="#!" class="breadcrumb active"><i class="material-icons">info_outline</i>评估信息</a>
+            <div class="col xl7 offset-xl1">
+                <div class="row">
+                    <div class="col xl12">
+                        <a href="#!" class="breadcrumb"><i class="material-icons">library_books</i>专利实例选择</a>
+                        <a href="#!" class="breadcrumb"><i class="material-icons">fingerprint</i>身份校验</a>
+                        <a href="#!" class="breadcrumb active"><i class="material-icons">info_outline</i>评估信息</a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col xl12">
+                        <blockquote class="info">
+                            在此表单，需要一些额外的信息，以使得评估更加精确快速的进行
+                        </blockquote>
+                    </div>
+                </div>
+                <form>
+                    <div class="row">
+                        <div class="input-field col xl8">
+                            <select multiple>
+                                <option value="" disabled selected>选择区域...</option>
+                                <option value="1">Option 1</option>
+                                <option value="2">Option 2</option>
+                                <option value="3">Option 3</option>
+                            </select>
+                            <label>技术转让区域</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col xl5">
+                            <select>
+                                <option value="" disabled selected>选择...</option>
+                                <option value="1">Option 1</option>
+                                <option value="2">Option 2</option>
+                                <option value="3">Option 3</option>
+                            </select>
+                            <label>行业分类</label>
+                        </div>
+                        <div class="input-field col xl5">
+                            <select>
+                                <option value="" disabled selected>选择...</option>
+                                <option value="1">Option 1</option>
+                                <option value="2">Option 2</option>
+                                <option value="3">Option 3</option>
+                            </select>
+                            <label>行业细分</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col xl7">
+                            <select>
+                                <option value="" disabled selected>选择...</option>
+                                <option value="1">完全转让</option>
+                                <option value="2">Option 2</option>
+                                <option value="3">Option 3</option>
+                            </select>
+                            <label>评估目的</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col xl10">
+                            <button class="btn red lighten-2 waves-effect waves-light right submit">提交</button>
+                        </div>
+
+                    </div>
+                </form>
+
             </div>
-        </div>
-        <div class="row">
-            <div class="col s12 m10 offset-m1 xl10 offset-xl1">
-                <blockquote class="info">
-                    在此表单，需要您提供一些额外的信息，以使得评估更加精确快速的进行
+            <div class="col xl3 side-help">
+                <blockquote>
+                    <i class="material-icons left">lightbulb_outline</i>提示
+                    <p>如果您在填写中遇到问题，可以使用以下方式寻求帮助:</p>
+
+                    <p><i class="material-icons left">link</i>链接：<a href="#">帮助文档</a></p>
+                    <p><i class="material-icons left">live_help</i>在线客服：<a href="#">发起对话</a></p>
+                    <p><i class="material-icons left">local_phone</i>电话：<a href="#">021-66666666</a></p>
+
                 </blockquote>
             </div>
         </div>
-        <div class="row">
 
-        </div>
     </div>
     <div class="fixed-action-btn">
         <a class="btn-floating btn-large red">
@@ -196,7 +259,7 @@
         content: '\E5CC   ';
         font-family: 'Material Icons';
         font-size: 20px;
-        vertical-align: middle;
+        vertical-align: bottom;
         color: #8b1014;
     }
 
@@ -206,6 +269,7 @@
     }
 
     blockquote.info {
+        padding-left: 0px;
         border: 0;
         font-size: 15px;
         vertical-align: middle;
@@ -217,13 +281,29 @@
         content: 'info_outline';
         font-family: 'Material Icons';
         font-size: 20px;
-        vertical-align: middle;
+        vertical-align: sub;
         color: grey;
+    }
+
+    button.btn.submit {
+        width: 150px;
+    }
+
+    main div.container {
+        margin-top: 40px;
+    }
+
+    .side-help blockquote {
+        color: gray;
+    }
+
+    .side-help blockquote p {
+        font-size: 14px;
     }
 </style>
 <script type="text/javascript">
   M.AutoInit();
-  document.addEventListener('DOMContentLoaded', function() {
+  document.addEventListener('DOMContentLoaded', function () {
     var elems = document.querySelectorAll('.fixed-action-btn');
     var instances = M.FloatingActionButton.init(elems, {
       direction: 'left',
