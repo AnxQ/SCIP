@@ -39,9 +39,9 @@
         </div>
         <div class="nav-content">
             <ul class="tabs tabs-transparent">
-                <li class="tab"><a href="#test1">基本信息</a></li>
+                <li class="tab disabled"><a href="#test1">基本信息</a></li>
                 <li class="tab disabled"><a href="#test2">产值预测</a></li>
-                <li class="tab disabled"><a href="#test3">价值评估</a></li>
+                <li class="tab"><a class="active" href="#test3">价值评估</a></li>
                 <li class="tab disabled"><a href="#test4">风险评估</a></li>
             </ul>
         </div>
@@ -80,9 +80,9 @@
                         class="material-icons">assignment</i>评估管理</a>
                     <div class="collapsible-body" style="">
                         <ul>
-                            <li><a class="waves-effect waves-orange active" href="#">评估发起</a></li>
+                            <li><a class="waves-effect waves-orange" href="start_evaluate.html">评估发起</a></li>
                             <li><a class="waves-effect waves-orange" href="#">评估进度</a></li>
-                            <li><a class="waves-effect waves-orange" href="review_evaluate.html">评估报告</a></li>
+                            <li><a class="waves-effect waves-orange active" href="#">评估报告</a></li>
                         </ul>
                     </div>
                 </li>
@@ -108,68 +108,47 @@
             <div class="col xl7 offset-xl1">
                 <div class="row">
                     <div class="col xl12">
-                        <a href="#!" class="breadcrumb"><i class="material-icons">library_books</i>专利实例选择</a>
-                        <a href="#!" class="breadcrumb"><i class="material-icons">fingerprint</i>身份校验</a>
-                        <a href="#!" class="breadcrumb active"><i class="material-icons">info_outline</i>评估信息</a>
+                        <a href="#!" class="breadcrumb"><i class="material-icons">library_books</i>评估选择</a>
+                        <a href="#!" class="breadcrumb active"><i class="material-icons">assessment</i>评估信息</a>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col xl12">
+                    <div class="col xl11">
                         <blockquote class="info">
-                            在此表单，需要一些额外的信息，以使得评估更加精确快速的进行
+                            评估报告根据平台及外部所拥有的数据资源综合分析得出，反应评估对象在评估日的价值估量，以供参考
                         </blockquote>
                     </div>
                 </div>
-                <form>
-                    <div class="row">
-                        <div class="input-field col xl8">
-                            <select multiple>
-                                <option value="" disabled selected>选择区域...</option>
-                                <option value="1">Option 1</option>
-                                <option value="2">Option 2</option>
-                                <option value="3">Option 3</option>
-                            </select>
-                            <label>技术转让区域</label>
+                <div class="row">
+                    <div class="col xl2">
+                        技术实例:
+                    </div>
+                    <div class="col xl10">
+                        <a href="#">*********</a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col xl3">
+                        评估价值:
+                    </div>
+                    <div class="col xl6">
+                        <div class="card-panel" align="center">
+                            <span><strong>¥</strong>&nbsp;&nbsp;<money>888888</money></span>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="input-field col xl5">
-                            <select>
-                                <option value="" disabled selected>选择...</option>
-                                <option value="1">Option 1</option>
-                                <option value="2">Option 2</option>
-                                <option value="3">Option 3</option>
-                            </select>
-                            <label>行业分类</label>
-                        </div>
-                        <div class="input-field col xl5">
-                            <select>
-                                <option value="" disabled selected>选择...</option>
-                                <option value="1">Option 1</option>
-                                <option value="2">Option 2</option>
-                                <option value="3">Option 3</option>
-                            </select>
-                            <label>行业细分</label>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="input-field col xl7">
-                            <select>
-                                <option value="" disabled selected>选择...</option>
-                                <option value="1">完全转让</option>
-                                <option value="2">Option 2</option>
-                                <option value="3">Option 3</option>
-                            </select>
-                            <label>评估目的</label>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col xl10">
-                            <button class="btn red lighten-2 waves-effect waves-light right submit">提交</button>
-                        </div>
+                </div>
+                <div class="row">
 
+                </div>
+                <div class="row">
+                    <div class="col xl4 offset-xl2" align="center">
+                        <a class="btn red lighten-2 waves-effect waves-light center submit">下载报告</a>
                     </div>
-                </form>
+                    <div class="col xl4" align="center">
+                        <a class="btn red lighten-2 waves-effect waves-light center submit">专家服务</a>
+                    </div>
+
+                </div>
 
             </div>
             <div class="col xl3 side-help">
@@ -285,7 +264,7 @@
         color: grey;
     }
 
-    button.btn.submit {
+    .btn.submit {
         width: 150px;
     }
 
@@ -299,6 +278,23 @@
 
     .side-help blockquote p {
         font-size: 14px;
+    }
+
+    .card-panel .row:after {
+        display: none;
+    }
+
+    strong {
+        font-size: 25px;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        vertical-align: middle;
+        color: #e28263;
+    }
+
+    money {
+        font-size: 24px;
+        font-family: 'Roboto Mono', monospace;
+        vertical-align: middle;
     }
 </style>
 <script type="text/javascript">
