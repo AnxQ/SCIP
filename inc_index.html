@@ -1,10 +1,382 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/ghpages-materialize.css" media="screen,projection"/>
+    <link rel="shortcut icon" href="favicon.ico">
+
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script type="text/javascript" src="js/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="js/messages_zh.min.js"></script>
+    <script type="text/javascript" src="js/three.min.js"></script>
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
     <meta charset="UTF-8">
-    <title>Title</title>
+
+    <title>管理中心</title>
 </head>
 <body>
-
+<header>
+    <ul id="dropdown_lang" class="dropdown-content">
+        <li><a href="#!">简体中文</a></li>
+        <li><a href="#!">繁體中文</a></li>
+        <li><a href="#!">English</a></li>
+    </ul>
+    <div class="navbar-fixed">
+        <nav>
+            <div class="nav-wrapper">
+                <a href="#" class="brand-logo"><img src="images/LOGO.png" height="30" width="105"
+                                                    style="margin: 18px"></a>
+                <ul class="right">
+                    <li><a class="">数据共享</a></li>
+                    <li><a class="">智能评估</a></li>
+                    <li><a class="">智能决策</a></li>
+                    <li><a class="">产权托管</a></li>
+                    <li><a class="">成功案例</a></li>
+                    <li><a class="">关于我们</a></li>
+                    <li><a class="dropdown-trigger" href="#!" data-target="dropdown_lang">简体中文<i
+                            class="material-icons left">arrow_drop_down</i></a></li>
+                    <li><a class="blue darken-4 waves-effect waves-light btn">登录<i
+                            class="material-icons left">person</i></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</header>
+<div id="wall-bg"></div>
+<div class="fixed-action-btn">
+    <a class="btn-floating btn-large red">
+        <i class="large material-icons">menu</i>
+    </a>
+    <ul>
+        <li><a class="btn-floating red"><i class="material-icons">home</i>主页</a></li>
+        <li><a class="btn-floating green"><i class="material-icons">help</i>帮助</a></li>
+        <li><a class="btn-floating blue"><i class="material-icons">publish</i>回到顶部</a></li>
+    </ul>
+</div>
+<main>
+    <div class="block">
+        <div class="row" style="margin-bottom: 0px">
+            <div class="col xl12" align="center">
+                <p class="title">苏创知识产权智能化企业决策服务平台</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col xl12" align="center">
+                <h4>从宏观到微观 不错过每个维度的分析情报</h4>
+            </div>
+        </div>
+        <div class="row" align="center">
+            <div class="col xl2 offset-xl2">
+                <div class="card-panel" align="left">
+                    <div class="row">
+                        <div class="col xl3" align="center">
+                            <i class="material-icons">insert_chart</i>
+                        </div>
+                        <div class="col xl9">
+                            <ptitle>技术聚类分布</ptitle>
+                            <br>
+                            <pcontent>以颜色表示专利技术相似度</pcontent>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col xl2">
+                <div class="card-panel" align="left">
+                    <div class="row">
+                        <div class="col xl3" align="center">
+                            <i class="material-icons">link</i>
+                        </div>
+                        <div class="col xl9">
+                            <ptitle>技术关联</ptitle>
+                            <br>
+                            <pcontent>不同聚类间的距离代表专利的相似程度</pcontent>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col xl2">
+                <div class="card-panel" align="left">
+                    <div class="row">
+                        <div class="col xl3" align="center">
+                            <i class="material-icons">access_time</i>
+                        </div>
+                        <div class="col xl9">
+                            <ptitle>技术发展周期</ptitle>
+                            <br>
+                            <pcontent>15秒动画展示技术发展全过程</pcontent>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col xl2">
+                <div class="card-panel" align="left">
+                    <div class="row">
+                        <div class="col xl3" align="center">
+                            <i class="material-icons">attach_money</i>
+                        </div>
+                        <div class="col xl9">
+                            <ptitle>高价值专利分布</ptitle>
+                            <br>
+                            <pcontent>显示百万美元以上的专利</pcontent>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col xl2 offset-xl2">
+                <div class="card-panel" align="left">
+                    <div class="row">
+                        <div class="col xl3" align="center">
+                            <i class="material-icons">my_location</i>
+                        </div>
+                        <div class="col xl9">
+                            <ptitle>技术热点/空白点</ptitle>
+                            <br>
+                            <pcontent>山峰代表热点，山谷代表空白点</pcontent>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col xl2">
+                <div class="card-panel" align="left">
+                    <div class="row">
+                        <div class="col xl3" align="center">
+                            <i class="material-icons">whatshot</i>
+                        </div>
+                        <div class="col xl9">
+                            <ptitle>竞争对手技术PK</ptitle>
+                            <br>
+                            <pcontent>柱子高度代表不同技术领域的专利数</pcontent>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col xl2">
+                <div class="card-panel" align="left">
+                    <div class="row">
+                        <div class="col xl3" align="center">
+                            <i class="material-icons">turned_in_not</i>
+                        </div>
+                        <div class="col xl9">
+                            <ptitle>政府拨款分布</ptitle>
+                            <br>
+                            <pcontent>显示拿到过政府拨款的专利</pcontent>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col xl2">
+                <div class="card-panel" align="left">
+                    <div class="row">
+                        <div class="col xl3" align="center">
+                            <i class="material-icons">gavel</i>
+                        </div>
+                        <div class="col xl9">
+                            <ptitle>诉讼案件分布</ptitle>
+                            <br>
+                            <pcontent>显示发生过诉讼的专利</pcontent>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
 </body>
+<style>
+    header, main, footer {
+        padding-left: 0px
+    }
+
+    nav ul li a:hover, nav ul li.active {
+        background-color: #4ea9ed;
+    }
+
+    div.block {
+        height: 100%;
+    }
+
+    #front-page-logo {
+        height: 75%;
+        width: 75%;
+    }
+
+    img.nav-avatar {
+        height: 45px;
+        width: 45px;
+        margin-top: -5px;
+        margin-right: 10px;
+        vertical-align: middle;
+    }
+
+    span.badge {
+        min-width: 1.5rem;
+    }
+
+    span.badge.new {
+        border-radius: 0.75rem;
+        margin-left: 10px;
+    }
+
+    .breadcrumb, .breadcrumb:before {
+        vertical-align: middle;
+    }
+
+    .breadcrumb, .breadcrumb:last-child {
+        color: gray;
+        font-size: 15px;
+    }
+
+    .breadcrumb.active {
+        color: darkred;
+    }
+
+    .breadcrumb:before {
+        color: #c0c0c0;
+    }
+
+    .breadcrumb i {
+        vertical-align: middle;
+        float: none !important;
+        margin-top: -4px;
+        margin-right: 10px;
+    }
+
+    .collapsible-body ul li a.active:before {
+        content: '\E5CC   ';
+        font-family: 'Material Icons';
+        font-size: 20px;
+        vertical-align: bottom;
+        color: #8b1014;
+    }
+
+    .collapsible-body ul li a.active {
+        vertical-align: middle;
+        color: #8b1014;
+    }
+
+    blockquote.info {
+        padding-left: 0px;
+        border: 0;
+        font-size: 15px;
+        vertical-align: middle;
+        color: grey;
+        margin: 0 0;
+    }
+
+    blockquote.info:before {
+        content: 'info_outline';
+        font-family: 'Material Icons';
+        font-size: 20px;
+        vertical-align: sub;
+        color: grey;
+    }
+
+    .btn.submit {
+        width: 150px;
+    }
+
+    main div.container {
+        margin-top: 40px;
+    }
+
+    .side-help blockquote {
+        color: gray;
+    }
+
+    .side-help blockquote p {
+        font-size: 14px;
+    }
+
+    .card-panel .row:after {
+        display: none;
+    }
+
+    strong {
+        font-size: 25px;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        vertical-align: middle;
+        color: #e28263;
+    }
+
+    money {
+        font-size: 24px;
+        font-family: 'Roboto Mono', monospace;
+        vertical-align: middle;
+    }
+
+    nav {
+        background-image: linear-gradient(300deg, #4da3ff 0%, #c2e9fb 100%);
+        opacity: 0.9;
+    }
+
+    #wall-bg {
+        z-index: -1;
+        position: fixed;
+        top: 0;
+        left: 0;
+        filter: blur(2px);
+    }
+
+    p.title {
+        font-size: 20px;
+        color: #0d0084;
+    }
+
+    p.title:before {
+        vertical-align: middle;
+        font-size: 30px;
+        content: 'removechevron_right ';
+        font-family: "Material Icons";
+    }
+
+    p.title:after {
+        vertical-align: middle;
+        font-size: 30px;
+        content: ' chevron_leftremove';
+        font-family: "Material Icons";
+    }
+
+    .card-panel {
+        background-color: rgba(255, 255, 255, 0.7);
+        height: 108px;
+        padding: 13px;
+    }
+
+    ptitle {
+        font-size: 16px;
+    }
+
+    pcontent {
+        font-size: 14px;
+        color: #504f4f;
+    }
+
+    .card-panel div div i {
+        font-size: 30px;
+        background: linear-gradient(to right, #2b6aff, #4da7ff);
+        -webkit-background-clip: text;
+        color: transparent
+    }
+
+    h4 {
+        margin-bottom: 50px;
+    }
+</style>
+<script type="text/javascript" src="js/wallbgcanvas.js"></script>
+<script type="text/javascript">
+  M.AutoInit();
+  $('main').height(window.innerHeight - $('.navbar-fixed').height);
+  document.addEventListener('DOMContentLoaded', function () {
+    var elems = document.querySelectorAll('.fixed-action-btn');
+    var instances = M.FloatingActionButton.init(elems, {
+      direction: 'left',
+      hoverEnabled: false
+    });
+  });
+</script>
 </html>

@@ -9,7 +9,9 @@ var particles, particle, count = 0;
 var mouseX = 0, mouseY = 0;
 
 var windowHalfX = window.innerWidth / 2;
-var windowHalfY = window.innerHeight / 1;
+var windowHalfY = window.innerHeight / 2;
+
+var material;
 
 init();
 animate();
@@ -28,7 +30,7 @@ function init() {
     particles = new Array();
 
     var PI2 = Math.PI * 2;
-    var material = new THREE.ParticleCanvasMaterial( {
+    material = new THREE.ParticleCanvasMaterial( {
         color: '#b6deff',
         program: function ( context ) {
 
